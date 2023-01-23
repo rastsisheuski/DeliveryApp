@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovingBasketView" customModule="DeliveryMenu" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="5T5-Sd-GHq"/>
+                <outlet property="hookView" destination="Zq9-mq-XUY" id="NG3-8g-j28"/>
+                <outlet property="mainView" destination="hSl-yD-XJf" id="hML-Vb-fqi"/>
+                <outlet property="orderButton" destination="6fO-gx-rM7" id="6LG-MB-orr"/>
+                <outlet property="tableView" destination="bOi-sN-gKL" id="Nvh-gT-ucF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="390"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zq9-mq-XUY">
+                    <rect key="frame" x="181.66666666666666" y="4" width="30" height="2"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="7nR-An-YZm"/>
+                        <constraint firstAttribute="height" constant="2" id="lt6-eG-yon"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSl-yD-XJf">
+                    <rect key="frame" x="20" y="16" width="353" height="256.66666666666669"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bOi-sN-gKL" customClass="SelfSizingTableView" customModule="DeliveryMenu" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="10" width="353" height="230.66666666666666"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bOi-sN-gKL" secondAttribute="trailing" id="OFp-Pc-vks"/>
+                        <constraint firstItem="bOi-sN-gKL" firstAttribute="leading" secondItem="hSl-yD-XJf" secondAttribute="leading" id="W2q-RC-F6A"/>
+                        <constraint firstItem="bOi-sN-gKL" firstAttribute="top" secondItem="hSl-yD-XJf" secondAttribute="top" constant="10" id="X2g-bq-Tfe"/>
+                        <constraint firstAttribute="bottom" secondItem="bOi-sN-gKL" secondAttribute="bottom" constant="16" id="zmx-AY-wKW"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fO-gx-rM7" customClass="OrderButton" customModule="DeliveryMenu" customModuleProvider="target">
+                    <rect key="frame" x="20" y="272.66666666666669" width="353" height="34.333333333333314"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Zq9-mq-XUY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="00m-ja-NLP"/>
+                <constraint firstItem="6fO-gx-rM7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="1Yr-PB-Wa1"/>
+                <constraint firstAttribute="bottom" secondItem="6fO-gx-rM7" secondAttribute="bottom" constant="83" id="5RV-Fy-fcx"/>
+                <constraint firstAttribute="trailing" secondItem="6fO-gx-rM7" secondAttribute="trailing" constant="20" id="BcB-OC-NcL"/>
+                <constraint firstAttribute="trailing" secondItem="hSl-yD-XJf" secondAttribute="trailing" constant="20" id="BuW-uC-W01"/>
+                <constraint firstItem="Zq9-mq-XUY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JmN-nM-Ut2"/>
+                <constraint firstItem="hSl-yD-XJf" firstAttribute="top" secondItem="Zq9-mq-XUY" secondAttribute="bottom" constant="10" id="YFl-a5-0Kn"/>
+                <constraint firstItem="hSl-yD-XJf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="co6-cm-2zH"/>
+                <constraint firstItem="6fO-gx-rM7" firstAttribute="top" secondItem="hSl-yD-XJf" secondAttribute="bottom" id="zbF-DK-yNn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-113.74045801526717" y="-354.92957746478874"/>
+        </view>
+    </objects>
+</document>
